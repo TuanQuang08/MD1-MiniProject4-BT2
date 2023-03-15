@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Kích thước đàn cừu:
+<p id="arr1"></p>
+<p id="arr2"></p>
+Kích thước sau khi cạo đàn cừu:
+<p id="arr3"></p>
+<br><br>
+Kích thước đàn cừu sau 1 tháng:
+<p id="arr4"></p>
+<p id="arr5"></p>
+Kích thước sau khi cạo đàn cừu:
+<p id="arr6"></p>
+Kích thước đàn cừu sau 2 tháng:
+<p id="arr7"></p>
+<p id="arr8"></p>
+<p id="arr9"></p>
+</body>
+<script>
+  let arr = [5,7,300,90,24,50,75];
+  document.getElementById('arr1').innerHTML = arr.join();
+  let max = Math.max(...arr);
+  document.getElementById('arr2').innerHTML = "Con lớn nhất có kích thước là: " + max;
+  let indexMax = arr.indexOf(300);
+  arr[indexMax] = 8;
+  document.getElementById('arr3').innerHTML = arr.join();
+  for(let i = 0;i<arr.length;i++){
+    arr[i] += 50;
+  }
+  document.getElementById('arr4').innerHTML = arr.join();
+  let max2 = Math.max(...arr);
+  document.getElementById('arr5').innerHTML = "Con lớn nhất có kích thước là: " + max2;
+  let indexMax2 = arr.indexOf(300);
+  arr[indexMax2] = 8;
+  document.getElementById('arr6').innerHTML = arr.join();
+  for(let i = 0;i<arr.length;i++){
+    arr[i] += 50;
+  }
+  document.getElementById('arr7').innerHTML = arr.join();
+
+  let sum = 0;
+  for(let i = 0;i<arr.length;i++){
+    sum += arr[i];
+  }
+  document.getElementById('arr8').innerHTML = "Tổng kích thước đàn cừu là: " + sum;
+  let money = sum * 2;
+  document.getElementById('arr9').innerHTML = "Bán được: " + money;
+</script>
+</html>

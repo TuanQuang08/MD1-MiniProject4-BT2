@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let input = prompt("Nhập vào các số cách nhau bằng dấu phẩy: ");
+  console.log(input);
+  let min = input[0];
+  for(let i = 1 ; i<input.length;i++) {
+    if (input[i] !== ",") {
+      if (input[i] === "-") {
+        i++;
+        let temp = parseInt(input[i]);
+        temp *= -1;
+        if (min > temp) {
+          min = temp;
+        }
+      }
+    if (min > parseInt(input[i])) {
+      min = parseInt(input[i]);
+    }
+  }
+  }
+  alert("Số nhỏ nhất là: " + min);
+</script>
+</html>

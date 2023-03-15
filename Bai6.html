@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  let arr = [3,1,2,-10,5,12,20,-100,8];
+  let input = parseInt(prompt("Nhập vào 1 số cần tìm: "));
+  let index = null;
+  for(let i = 0;i<arr.length;i++){
+    if (arr[i] === input){
+      index = i;
+    }
+  }
+  if(index !== null){
+    alert(input + " được tìm thấy trong array tại index " + index);
+  }else {
+    alert(input + " không tìm thấy trong array");
+  }
+</script>
+</html>
